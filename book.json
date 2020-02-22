@@ -59,7 +59,7 @@
         	"url":"https://github.com/xresearcher"
         },
         "edit-link":{
-        	"base": "https://github.com/xresearcher/data/edit/master",
+        	"base": "https://github.com/xresearcher/data/tree/master",
         	"label": "Edit This Page"
         },
         "versions":{
