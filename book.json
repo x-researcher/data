@@ -56,10 +56,10 @@
         	"modify_format":"YYYY-MM-DD HH:mm:ss"
         },
         "github":{
-        	"url":"https://github.com/xresearcher"
+        	"url":"https://github.com/x-researcher"
         },
         "edit-link":{
-        	"base": "https://github.com/xresearcher/data/blob/master",
+        	"base": "https://github.com/x-researcher/data/tree/master",
         	"label": "Edit This Page"
         },
         "versions":{
