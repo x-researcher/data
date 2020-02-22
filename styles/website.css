@@ -1,0 +1,11 @@
+/*
+.gitbook-link {
+ display: none !important;
+}
+*/
+.versions-select select {
+    height: 2em;
+    line-height: 2em;
+    border-radius: 4px;
+    background: #efefef;
+}
