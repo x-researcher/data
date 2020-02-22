@@ -1,0 +1,101 @@
+{
+    "title": "我的一本书",
+    "author" : "Jonathon",
+    "description" : "我第一本书的描述，很好",
+    "direction" : "ltr",
+    "language" : "zh-hans",
+    "links" : {
+        "sidebar" : {
+            "Home" : "https://xresearcher.com"
+        }
+    },
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+    "plugins": [
+        "-lunr",
+        "-search",
+        "rss",
+        "search-plus",
+        "anchors",
+        "anchor-navigation-ex",
+        "splitter",
+        "advanced-emoji",
+        "github",
+        "edit-link",
+        "katex",
+        "sitemap-general",
+        "todo",
+        "copy-code-button",
+        "alerts",
+        "include-csv",
+        "klipse",
+        "disqus",
+        "tbfed-pagefooter",
+        "versions-select"
+    ],
+    "pluginsConfig": {
+        "theme-default":{
+        	"showLevel": true
+        },
+        "anchor-navigation-ex": {
+        	"showLevel":false,
+            "isShowTocTitleIcon": true,
+            "associatedWithSummary":false
+        },
+        "sitemap-general": {
+            "prefix": "https://data.xresearcher.com"
+        },
+        "disqus":{
+        	"shortName": "data-xresearcher-com"
+        },
+        "tbfed-pagefooter":{
+        	"copyright":"Copyright &copy xresearcher.com 2020",
+        	"modify_label":"该文件修订时间： ",
+        	"modify_format":"YYYY-MM-DD HH:mm:ss"
+        },
+        "github":{
+        	"url":"https://github.com/xresearcher"
+        },
+        "edit-link":{
+        	"base": "https://github.com/xresearcher/data/edit/master",
+        	"label": "Edit This Page"
+        },
+        "version":{
+        	"option":[
+        		{
+        			"value":"https://data.xresearcher.com",
+        			"text":"数据科学学习手册"
+        		},
+        		{
+        			"value":"https://python.xresearcher.com",
+        			"text":"Python学习手册"
+        		},
+        		{
+        			"value":"https://r.xresearcher.com",
+        			"text":"R语言学习手册"
+        		}
+        	]
+        },
+        "rss":{
+        	"title":"数据科学学习手册",
+        	"description":"记录一些用得到的统计方法",
+        	"author":"xresearcher",
+        	"feed_url":"https://data.xresearcher.com/rss",
+        	"site_url":"https://data.xresearcher.com",
+        	"managingEditor": "me@xresearcher.com",
+        	"webMaster": "me@xresearcher.com",
+        	"categories":[
+        		"Data Science"
+        	]
+        }
+    },
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    }
+}
