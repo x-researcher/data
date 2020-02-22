@@ -62,8 +62,8 @@
         	"base": "https://github.com/xresearcher/data/edit/master",
         	"label": "Edit This Page"
         },
-        "version":{
-        	"option":[
+        "versions":{
+        	"options":[
         		{
         			"value":"https://data.xresearcher.com",
         			"text":"数据科学学习手册"
