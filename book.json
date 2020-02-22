@@ -16,13 +16,11 @@
     "plugins": [
         "-lunr",
         "-search",
-        "rss",
         "search-plus",
         "anchors",
         "anchor-navigation-ex",
         "splitter",
         "advanced-emoji",
-        "github",
         "edit-link",
         "katex",
         "sitemap-general",
@@ -55,9 +53,6 @@
         	"modify_label":"该文件修订时间： ",
         	"modify_format":"YYYY-MM-DD HH:mm:ss"
         },
-        "github":{
-        	"url":"https://github.com/x-researcher"
-        },
         "edit-link":{
         	"base": "https://github.com/x-researcher/data/tree/master",
         	"label": "Edit This Page"
@@ -76,18 +71,6 @@
         			"value":"https://r.xresearcher.com",
         			"text":"R语言学习手册"
         		}
-        	]
-        },
-        "rss":{
-        	"title":"数据科学学习手册",
-        	"description":"记录一些用得到的统计方法",
-        	"author":"xresearcher",
-        	"feed_url":"https://data.xresearcher.com/rss",
-        	"site_url":"https://data.xresearcher.com",
-        	"managingEditor": "me@xresearcher.com",
-        	"webMaster": "me@xresearcher.com",
-        	"categories":[
-        		"Data Science"
         	]
         }
     },
