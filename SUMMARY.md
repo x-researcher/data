@@ -14,5 +14,5 @@
 ## R Study
 * [R](R/README.md)
     * [第一章](R/chapter1.md)
-    * [第二章](R/chapter2.md)
+    * [第二章00](R/chapter2.md)
 
