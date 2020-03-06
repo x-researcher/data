@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-22 13:52:55
- * @LastEditTime: 2020-03-06 21:38:18
+ * @LastEditTime: 2020-03-06 22:14:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \data\gitbook-source\R\chapter2.md
@@ -13,4 +13,4 @@
 
 新的测试
 
-咋回事呢，一直不成功
+咋回事呢，一直不成功啊
