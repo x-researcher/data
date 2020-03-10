@@ -54,7 +54,7 @@
         	"modify_format":"YYYY-MM-DD HH:mm:ss"
         },
         "edit-link":{
-        	"base": "https://github.com/x-researcher/data/tree/master",
+        	"base": "https://github.com/x-researcher/data/tree/master/gitbook-source",
         	"label": "Edit This Page"
         },
         "versions":{
