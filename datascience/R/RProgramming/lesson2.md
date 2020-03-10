@@ -1,4 +1,4 @@
-# Lesson 2 工作空间和文件
+# Lesson 2: 工作空间和文件
 在本节课，你将能学到，在 R 语言中如何检查你的当地工作空间，以及开始探索工作空间与机器的文件系统之间的关系。
 
 因为不同操作系统在处理事情比如文件路径等有不同的规定，这些命令的输出结果也可能因机器而异。不管怎么说，重要的是，R 语言为与文件交互提供了一个通用 API.
@@ -102,3 +102,59 @@ mytest.R 2020-03-09 22:49:36   0   0  root   root
 > file.path('mytest3.R')
 [1] "mytest3.R"
 ~~~
+可以利用这个特性获得文件夹的相对路径，例如：
+~~~r
+> file.path("folder1", "folder2")
+[1] "folder1/folder2"
+~~~
+## dir.create()
+`?dir.create` 查看帮助文件，注意 `recursive` 参数，为了创建嵌套目录，`recursive` 应设为 `TRUE`.
+~~~r
+> ?dir.create
+files2                  package:base                   R Documentation
+
+Manipulation of Directories and File Permissions
+
+Description:
+
+     These functions provide a low-level interface to the computer's
+     file system.
+
+Usage:
+
+     dir.exists(paths)
+     dir.create(path, showWarnings = TRUE, recursive = FALSE, mode = "0777")
+     Sys.chmod(paths, mode = "0777", use_umask = TRUE)
+     Sys.umask(mode = NA)
+
+Arguments:
+
+    path: a character vector containing a single path name.  Tilde
+          expansion (see ‘path.expand’) is done.
+
+   paths: character vectors containing file or directory paths.  Tilde
+          expansion (see ‘path.expand’) is done.
+
+showWarnings: logical; should the warnings on failure be shown?
+
+recursive: logical. Should elements of the path other than the last be
+          created?  If true, like the Unix command ‘mkdir -p’.
+
+    mode: the mode to be used on Unix-alikes: it will be coerced by
+          ‘as.octmode’.  For ‘Sys.chmod’ it is recycled along ‘paths’.
+
+use_umask: logical: should the mode be restricted by the ‘umask’
+          setting?
+
+Details:
+···
+~~~
+在当前工作目录下，创建一个名为 `testdir2` 的文件夹，以及一个名为 `testdir3` 的子文件夹（这利用到之前提到的 `file.path()` 的特性）。
+~~~r
+> dir.create(file.path('testdir2', 'testdir3'), recursive = TRUE)
+~~~
+使用 `setwd()` 函数返回原来的工作目录（可重新调用之前创建的变量 `old.dir`）
+~~~r
+> setwd(old.dir)
+~~~
+这对于保存之前的设置，开始一个分析，然后在结束时返回起始位置十分有帮助。
