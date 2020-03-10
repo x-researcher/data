@@ -1,0 +1,487 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数列 · 数据科学学习手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jonathon">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lesson4.html" />
+    
+    
+    <link rel="prev" href="lesson2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://xresearcher.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    R Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="lesson1.html">
+            
+                <a href="lesson1.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    基本构件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="lesson2.html">
+            
+                <a href="lesson2.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    工作空间和文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.3" data-path="lesson3.html">
+            
+                <a href="lesson3.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="lesson4.html">
+            
+                <a href="lesson4.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#lesson-3-&#x6570;&#x5217;"><b></b>Lesson 3: &#x6570;&#x5217;</a></li></ul></div><a href="#lesson-3-&#x6570;&#x5217;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="lesson-3-&#x6570;&#x5217;"><a name="lesson-3-&#x6570;&#x5217;" class="anchor-navigation-ex-anchor" href="#lesson-3-&#x6570;&#x5217;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lesson-3-&#x6570;&#x5217;" class="plugin-anchor" href="#lesson-3-&#x6570;&#x5217;"><i class="fa fa-link" aria-hidden="true"></i></a>Lesson 3: &#x6570;&#x5217;</h1>
+<p>&#x8FD9;&#x8282;&#x8BFE;&#xFF0C;&#x5B66;&#x4E60;&#x5728; R &#x4E2D;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x6570;&#x5217;&#x3002;</p>
+<p>&#x5728; R &#x4E2D;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x521B;&#x5EFA;&#x6570;&#x5217;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528; <code>:</code> &#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x8F93;&#x5165; <code>1&#xFF1A;20</code> &#x67E5;&#x770B;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x4F5C;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-r">&gt; <span class="hljs-number">1</span>:<span class="hljs-number">20</span>
+ [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">14</span> <span class="hljs-number">15</span> <span class="hljs-number">16</span> <span class="hljs-number">17</span> <span class="hljs-number">18</span> <span class="hljs-number">19</span> <span class="hljs-number">20</span>
+</code></pre>
+<p>&#x5B83;&#x7684;&#x8F93;&#x51FA;&#x503C;&#x4E3A; 1-20 &#x7684;&#x6240;&#x6709;&#x6574;&#x6570;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x80FD;&#x7528;&#x5B83;&#x521B;&#x5EFA;&#x5B9E;&#x6570;&#x6570;&#x5217;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-r">&gt; pi:<span class="hljs-number">10</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">3.141593</span> <span class="hljs-number">4.141593</span> <span class="hljs-number">5.141593</span> <span class="hljs-number">6.141593</span> <span class="hljs-number">7.141593</span> <span class="hljs-number">8.141593</span> <span class="hljs-number">9.141593</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x662F;&#x4ECE; pi &#x5F00;&#x59CB;&#xFF0C;&#x9012;&#x589E;&#x95F4;&#x9694;&#x4E3A; 1 &#x7684;&#x5B9E;&#x6570;&#x5411;&#x91CF;&#x3002;&#x4E0A;&#x9650; 10 &#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x8FBE;&#x5230;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5927;&#x4E8E; 10.</p>
+<p>&#x5982;&#x679C;&#x8F93;&#x5165; <code>15:1</code> &#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F; &#x8BD5;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-r">&gt; <span class="hljs-number">15</span>:<span class="hljs-number">1</span>
+ [<span class="hljs-number">1</span>] <span class="hljs-number">15</span> <span class="hljs-number">14</span> <span class="hljs-number">13</span> <span class="hljs-number">12</span> <span class="hljs-number">11</span> <span class="hljs-number">10</span>  <span class="hljs-number">9</span>  <span class="hljs-number">8</span>  <span class="hljs-number">7</span>  <span class="hljs-number">6</span>  <span class="hljs-number">5</span>  <span class="hljs-number">4</span>  <span class="hljs-number">3</span>  <span class="hljs-number">2</span>  <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x4E3A;&#x4E00;&#x7EC4;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;</p>
+<p>&#x5B66;&#x4E60; R &#x65F6;&#xFF0C;&#x6709;&#x4EFB;&#x4F55;&#x4E0D;&#x6E05;&#x695A;&#x7684;&#x51FD;&#x6570;&#x529F;&#x80FD;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67E5;&#x8BE2; R &#x81EA;&#x5E26;&#x7684;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x83B7;&#x5F97;&#xFF0C;&#x6B64;&#x5904;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&apos;:&apos;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code>&gt; ?&apos;:&apos;
+
+     The binary operator &#x2018;:&#x2019; has two meanings: for factors &#x2018;a:b&#x2019; is
+     equivalent to &#x2018;interaction(a, b)&#x2019; (but the levels are ordered and
+     labelled differently).
+
+     For other arguments &#x2018;from:to&#x2019; is equivalent to &#x2018;seq(from, to)&#x2019;,
+     and generates a sequence from &#x2018;from&#x2019; to &#x2018;to&#x2019; in steps of &#x2018;1&#x2019; or
+     &#x2018;-1&#x2019;.  Value &#x2018;to&#x2019; will be included if it differs from &#x2018;from&#x2019; by an
+     integer up to a numeric fuzz of about &#x2018;1e-7&#x2019;.  Non-numeric
+     arguments are coerced internally (hence without dispatching
+     methods) to numeric-complex values will have their imaginary parts
+     discarded with a warning.
+
+Value:
+
+     For numeric arguments, a numeric vector.  This will be of type
+     &#x2018;integer&#x2019; if &#x2018;from&#x2019; is integer-valued and the result is
+     representable in the R integer type, otherwise of type &#x2018;&quot;double&quot;&#x2019;
+     (aka &#x2018;mode&#x2019; &#x2018;&quot;numeric&quot;&#x2019;).
+
+     For factors, an unordered factor with levels labelled as &#x2018;la:lb&#x2019;
+     and ordered lexicographically (that is, &#x2018;lb&#x2019; varies fastest).
+
+References:
+&#xB7;&#xB7;&#xB7;
+Examples:
+
+     1:4
+     pi:6 # real
+     6:pi # integer
+
+     f1 &lt;- gl(2, 3); f1
+     f2 &lt;- gl(3, 2); f2
+     f1:f2 # a factor, the &quot;cross&quot;  f1 x f2
+</code></pre><p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x521B;&#x5EFA;&#x6570;&#x5217;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x83B7;&#x5F97;&#x6BD4; &apos;:&apos; &#x8FD0;&#x7B97;&#x7B26;&#x63D0;&#x4F9B;&#x7684;&#x66F4;&#x591A;&#x7684;&#x81EA;&#x7531;&#x5EA6;&#xFF0C; <code>seq()</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p><code>seq()</code> &#x51FD;&#x6570;&#x6700;&#x57FA;&#x672C;&#x7684;&#x7528;&#x6CD5;&#x548C; <code>:</code> &#x8FD0;&#x7B97;&#x7B26;&#x4E00;&#x6837;&#xFF0C;&#x4F8B;&#x5982; <code>seq(1, 10)</code>:</p>
+<pre><code class="lang-r">&gt; seq(<span class="hljs-number">1</span>, <span class="hljs-number">20</span>)
+ [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">14</span> <span class="hljs-number">15</span> <span class="hljs-number">16</span> <span class="hljs-number">17</span> <span class="hljs-number">18</span> <span class="hljs-number">19</span> <span class="hljs-number">20</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x4E0E; <code>1:20</code> &#x4E00;&#x81F4;&#x3002;&#x5982;&#x679C;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x589E;&#x5E45;&#x4E3A; 0.5&#xFF0C;&#x8303;&#x56F4;&#x5728; 0-10 &#x7684;&#x6570;&#x5217;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>seq(0, 10, by=0.5)</code></p>
+<pre><code class="lang-r">&gt; seq(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, by = <span class="hljs-number">0.5</span>)
+ [<span class="hljs-number">1</span>]  <span class="hljs-number">0.0</span>  <span class="hljs-number">0.5</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">1.5</span>  <span class="hljs-number">2.0</span>  <span class="hljs-number">2.5</span>  <span class="hljs-number">3.0</span>  <span class="hljs-number">3.5</span>  <span class="hljs-number">4.0</span>  <span class="hljs-number">4.5</span>  <span class="hljs-number">5.0</span>  <span class="hljs-number">5.5</span>  <span class="hljs-number">6.0</span>  <span class="hljs-number">6.5</span>  <span class="hljs-number">7.0</span>
+[<span class="hljs-number">16</span>]  <span class="hljs-number">7.5</span>  <span class="hljs-number">8.0</span>  <span class="hljs-number">8.5</span>  <span class="hljs-number">9.0</span>  <span class="hljs-number">9.5</span> <span class="hljs-number">10.0</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x5173;&#x5FC3;&#x589E;&#x5E45;&#xFF0C;&#x53EA;&#x662F;&#x60F3;&#x83B7;&#x5F97;5-10&#x8303;&#x56F4;&#x5185;&#x7684;30&#x4E2A;&#x6570;&#x5B57;&#xFF0C;<code>seq(5 ,10, length=30)</code> &#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#x3002;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF; <code>my_seq</code></p>
+<pre><code class="lang-r">&gt; my_seq &lt;- seq(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>, length=<span class="hljs-number">30</span>)
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x8BA4; <code>my_seq</code> &#x53D8;&#x91CF;&#x7684;&#x957F;&#x5EA6;&#x4E3A; 30&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>length()</code> &#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-r">&gt; length(my_seq)
+[<span class="hljs-number">1</span>] <span class="hljs-number">30</span>
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x4E0D;&#x77E5;&#x9053; <code>my_seq</code> &#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4ECE;1&#x5230;N&#x7684;&#x6574;&#x6570;&#x6570;&#x5217;&#xFF0C;N&#x4EE3;&#x8868;&#x7684;&#x662F;&#x5411;&#x91CF; <code>my_seq</code> &#x7684;&#x957F;&#x5EA6;&#x3002; &#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5411;&#x91CF; (1,2,3,&#xB7;&#xB7;&#xB7;)&#xFF0C;&#x5B83;&#x7684;&#x957F;&#x5EA6;&#x4E0E; <code>my_seq</code> &#x76F8;&#x540C;&#x3002;</p>
+<p>&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x3002;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x7ED3;&#x5408; <code>:</code> &#x8FD0;&#x7B97;&#x7B26;&#x548C; <code>length()</code> &#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x50CF; <code>1:length(my_seq)</code> &#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x8BD5;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-r">&gt; <span class="hljs-number">1</span>:length(my_seq)
+ [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">14</span> <span class="hljs-number">15</span> <span class="hljs-number">16</span> <span class="hljs-number">17</span> <span class="hljs-number">18</span> <span class="hljs-number">19</span> <span class="hljs-number">20</span> <span class="hljs-number">21</span> <span class="hljs-number">22</span> <span class="hljs-number">23</span> <span class="hljs-number">24</span> <span class="hljs-number">25</span>
+[<span class="hljs-number">26</span>] <span class="hljs-number">26</span> <span class="hljs-number">27</span> <span class="hljs-number">28</span> <span class="hljs-number">29</span> <span class="hljs-number">30</span>
+</code></pre>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528; <code>seq(along.with = my_seq)</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-r">&gt; seq(<span class="hljs-number">1</span>, along.with = my_seq)
+ [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">14</span> <span class="hljs-number">15</span> <span class="hljs-number">16</span> <span class="hljs-number">17</span> <span class="hljs-number">18</span> <span class="hljs-number">19</span> <span class="hljs-number">20</span> <span class="hljs-number">21</span> <span class="hljs-number">22</span> <span class="hljs-number">23</span> <span class="hljs-number">24</span> <span class="hljs-number">25</span>
+[<span class="hljs-number">26</span>] <span class="hljs-number">26</span> <span class="hljs-number">27</span> <span class="hljs-number">28</span> <span class="hljs-number">29</span> <span class="hljs-number">30</span>
+</code></pre>
+<p>&#x4E0D;&#x7BA1;&#x600E;&#x4E48;&#x6837;&#xFF0C;&#x4E0E;&#x8BB8;&#x591A;&#x5E38;&#x89C1;&#x4EFB;&#x52A1;&#x4E00;&#x6837;&#xFF0C;R &#x6709;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x80FD;&#x63D0;&#x4F9B;&#x6B64;&#x529F;&#x80FD;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#xFF0C;&#x79F0;&#x4E3A; <code>seq_along()</code>, &#x6211;&#x4EEC;&#x8BD5;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-r">&gt; seq_along(my_seq)
+ [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">14</span> <span class="hljs-number">15</span> <span class="hljs-number">16</span> <span class="hljs-number">17</span> <span class="hljs-number">18</span> <span class="hljs-number">19</span> <span class="hljs-number">20</span> <span class="hljs-number">21</span> <span class="hljs-number">22</span> <span class="hljs-number">23</span> <span class="hljs-number">24</span> <span class="hljs-number">25</span>
+[<span class="hljs-number">26</span>] <span class="hljs-number">26</span> <span class="hljs-number">27</span> <span class="hljs-number">28</span> <span class="hljs-number">29</span> <span class="hljs-number">30</span>
+</code></pre>
+<p>&#x5728; R &#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x8FD8;&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x5F53;&#x4F60;&#x6210;&#x4E3A;&#x9AD8;&#x7EA7;&#x7684;R&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x8BA1;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x6765;&#x89E3;&#x51B3;&#x90A3;&#x4E9B;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x9009;&#x62E9;&#x65F6;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5728;&#x5C06;&#x6765;&#x7684;&#x8BFE;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x63A2;&#x7D22;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x4E0E;&#x521B;&#x5EFA;&#x6570;&#x5217;&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#x662F; <code>rep()</code>, &#x5176;&#x542B;&#x4E49;&#x662F; <code>replicate</code>, &#x4E0B;&#x9762;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x5B83;&#x7684;&#x4E00;&#x4E9B;&#x7528;&#x6CD5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B; 40&#x4E2A;&#x96F6;&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>rep(0, times = 40)</code>:</p>
+<pre><code class="lang-r">&gt; rep(<span class="hljs-number">0</span>, times = <span class="hljs-number">40</span>)
+ [<span class="hljs-number">1</span>] <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>
+[<span class="hljs-number">39</span>] <span class="hljs-number">0</span> <span class="hljs-number">0</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x91CD;&#x590D; 10&#x6B21; (0, 1, 2)&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C; <code>rep(c(0, 1, 2), times = 10)</code>.</p>
+<pre><code class="lang-r">&gt; rep(c(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>), times = <span class="hljs-number">10</span>)
+ [<span class="hljs-number">1</span>] <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x91CD;&#x590D;10&#x6B21;0&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x590D;10&#x6B21;1&#xFF0C;&#x6700;&#x540E;&#x518D;&#x91CD;&#x590D;10&#x6B21;2&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>each</code> &#x53C2;&#x6570;&#xFF0C;&#x8BD5;&#x4E00;&#x4E0B; <code>rep(c(0, 1, 2), each = 10)</code>:</p>
+<pre><code class="lang-r">&gt; rep(c(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>), each = <span class="hljs-number">10</span>)
+ [<span class="hljs-number">1</span>] <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; xresearcher.com 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 
+2020-03-10 22:36:05
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lesson2.html" class="navigation navigation-prev " aria-label="Previous page: 工作空间和文件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lesson4.html" class="navigation navigation-next " aria-label="Next page: 向量">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数列","level":"2.1.3","depth":2,"next":{"title":"向量","level":"2.1.4","depth":2,"path":"R/RProgramming/lesson4.md","ref":"R/RProgramming/lesson4.md","articles":[]},"previous":{"title":"工作空间和文件","level":"2.1.2","depth":2,"path":"R/RProgramming/lesson2.md","ref":"R/RProgramming/lesson2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","anchors","anchor-navigation-ex","splitter","advanced-emoji","edit-link","katex","sitemap-general","todo","copy-code-button","alerts","include-csv","klipse","disqus","tbfed-pagefooter","versions-select"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xresearcher.com 2020","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"},"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"data-xresearcher-com"},"todo":{},"splitter":{},"versions-select":{"type":"branches"},"sitemap-general":{"prefix":"https://data.xresearcher.com"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"alerts":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"versions":{"options":[{"value":"https://data.xresearcher.com","text":"数据科学学习手册"},{"value":"https://data1.xresearcher.com","text":"示例：下拉菜单01"},{"value":"https://data0.xresearcher.com","text":"示例：下拉菜单02"}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/x-researcher/data/tree/master/gitbook-source"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Jonathon","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据科学学习手册","language":"zh-hans","links":{"sidebar":{"Home":"https://xresearcher.com"}},"gitbook":"*","description":"学习资料的整理","direction":"ltr"},"file":{"path":"R/RProgramming/lesson3.md","mtime":"2020-03-10T14:36:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-10T14:38:35.910Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
