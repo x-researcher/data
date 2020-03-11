@@ -7,22 +7,19 @@
 目前正在学习的课程：
 ### `R` 语言
 
-[ ] [R Programming](https://github.com/swirldev/swirl_courses/tree/master/R_Programming)
-- [x] Lesson 1
-- [x] Lesson 2
-- [x] Lesson 3
-- [ ] Lesson 4
-- [ ] Lesson 5
-- [ ] Lesson 6
-- [ ] Lesson 7
-- [ ] Lesson 8
-- [ ] Lesson 9
-- [ ] Lesson 10
-- [ ] Lesson 11
-- [ ] Lesson 12
-- [ ] Lesson 13
-- [ ] Lesson 14
-- [ ] Lesson 15
-
-
-### `Python` 语言
+- [ ] [R Programming](https://github.com/swirldev/swirl_courses/tree/master/R_Programming)
+  - [x] 1. Basic Building Blocks
+  - [x] 2. Workspace and Files
+  - [x] 3. Sequences of Numbers
+  - [x] 4. Vectors
+  - [ ] 5. Missing Values
+  - [ ] 6. Subsetting Vectors
+  - [ ] 7. Matrices and Data Frames
+  - [ ] 8. Logic
+  - [ ] 9. Functions
+  - [ ] 10. lapply and sapply
+  - [ ] 11. vapply and tapply 
+  - [ ] 12. Looking at Data
+  - [ ] 13. Simulation
+  - [ ] 14. Dates and Times
+  - [ ] 15. Base Graphics

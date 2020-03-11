@@ -7,3 +7,4 @@
     * [工作空间和文件](R/RProgramming/lesson2.md)
     * [数列](R/RProgramming/lesson3.md)
     * [向量](R/RProgramming/lesson4.md)
+    * [缺失值](R/RProgramming/lesson5.md)
