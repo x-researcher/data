@@ -36,7 +36,7 @@ R
 - [x] 2. Workspace and Files
 - [x] 3. Sequences of Numbers
 - [x] 4. Vectors
-- [ ] 5. Missing Values
+- [x] 5. Missing Values
 - [ ] 6. Subsetting Vectors
 - [ ] 7. Matrices and Data Frames
 - [ ] 8. Logic
