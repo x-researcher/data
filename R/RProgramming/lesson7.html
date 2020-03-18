@@ -1,0 +1,547 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>矩阵和数据框 · 数据科学学习手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jonathon">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="lesson6.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://xresearcher.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    R Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="lesson1.html">
+            
+                <a href="lesson1.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    基本构件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="lesson2.html">
+            
+                <a href="lesson2.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    工作空间和文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="lesson3.html">
+            
+                <a href="lesson3.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="lesson4.html">
+            
+                <a href="lesson4.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="lesson5.html">
+            
+                <a href="lesson5.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    缺失值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="lesson6.html">
+            
+                <a href="lesson6.html">
+            
+                    
+                        <b>2.1.6.</b>
+                    
+                    子集向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.7" data-path="lesson7.html">
+            
+                <a href="lesson7.html">
+            
+                    
+                        <b>2.1.7.</b>
+                    
+                    矩阵和数据框
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >矩阵和数据框</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;"><b></b>Lesson 7: &#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;</a></li></ul></div><a href="#lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;"><a name="lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;" class="anchor-navigation-ex-anchor" href="#lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;" class="plugin-anchor" href="#lesson-7-&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>Lesson 7: &#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;</h1>
+<p>&#x5728;&#x672C;&#x8282;&#x8BFE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;&#x3002;&#x5B83;&#x4EEC;&#x90FD;&#x8868;&#x793A;&#x201D;&#x77E9;&#x5F62;&#x201C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4ED6;&#x4EEC;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5177;&#x6709;&#x884C;&#x548C;&#x5217;&#x7684;&#x8868;&#x683C;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x6B63;&#x5982;&#x4F60;&#x5C06;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x77E9;&#x9635;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x4E00;&#x7C7B;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x6570;&#x636E;&#x6846;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7C7B;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>:</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6570;&#x5B57; 1 &#x5230; 20 &#x7684;&#x5411;&#x91CF;&#x3002;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540D;&#x4E3A; <code>my_vector</code> &#x7684;&#x5411;&#x91CF;&#x4E2D;&#x3002;</p>
+<pre><code>&gt; my_vector &lt;- 1:20
+&gt; my_vector
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+</code></pre><p><code>dim()</code> &#x51FD;&#x6570;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x5BF9;&#x8C61;&#x7684;&#x201D;&#x7EF4;&#x6570;&#x201C;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8F93;&#x5165; <code>dim(my_vector)</code> &#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code>&gt; dim(my_vector)
+NULL
+</code></pre><p>&#x663E;&#x7136;&#xFF0C;&#x8FD9;&#x6CA1;&#x6709;&#x591A;&#x5927;&#x5E2E;&#x52A9;&#xFF01;&#x56E0;&#x4E3A; <code>my_vector</code> &#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x5B83;&#x6CA1;&#x6709; <code>dim</code> &#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>length()</code>  &#x51FD;&#x6570;&#x6765;&#x5F97;&#x5230;&#x5B83;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x73B0;&#x5728;&#x8BD5;&#x4E00;&#x8BD5;&#x3002;</p>
+<pre><code>&gt; length(my_vector)
+[1] 20
+</code></pre><p>&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7B54;&#x6848;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7ED9;&#x5411;&#x91CF;&#x4E00;&#x4E2A; <code>dim</code> &#x5C5E;&#x6027;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;&#x8F93;&#x5165; <code>dim(my_vector) &lt;- c(4, 5)</code> .</p>
+<pre><code>&gt; dim(my_vector) &lt;- c(4, 5)
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x6709;&#x70B9;&#x5947;&#x602A;&#xFF0C;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x5B83;&#x672C;&#x6765;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x3002;<code>dim()</code> &#x51FD;&#x6570;&#x5141;&#x8BB8;&#x4F60;&#x83B7;&#x53D6;&#x6216;&#x8005;&#x8BBE;&#x7F6E; R &#x5BF9;&#x8C61;&#x7684; <code>dim</code> &#x5C5E;&#x6027;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x503C; <code>c(4, 5)</code> &#x8D4B;&#x7ED9;&#x5411;&#x91CF;&#x7684; <code>dim</code> &#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>dim(my_vector)</code> &#x6765;&#x786E;&#x8BA4;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x5730;&#x8BBE;&#x7F6E;&#x4E86; <code>dim</code> &#x5C5E;&#x6027;&#x3002;</p>
+<pre><code>&gt; dim(my_vector)
+[1] 4 5
+</code></pre><p>&#x53E6;&#x4E00;&#x79CD;&#x67E5;&#x770B;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5BF9; <code>my_vector</code> &#x4F7F;&#x7528; <code>attributes()</code> &#x51FD;&#x6570;&#x3002;</p>
+<pre><code>&gt; attributes(my_vector)
+$dim
+[1] 4 5
+</code></pre><p>&#x5C31;&#x50CF;&#x5728;&#x6570;&#x5B66;&#x8BFE;&#x4E0A;&#x4E00;&#x6837;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x5BF9;&#x8C61;&#xFF08;&#x6BD4;&#x5982;&#x77E9;&#x5F62;&#x8868;&#xFF09;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x884C;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x5217;&#x6570;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x8D4B;&#x4E88;&#x4E86; <code>my_vector</code> 4 &#x884C; 5 &#x5217;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x7B49;&#x7B49;&#xFF01;&#x8FD9;&#x542C;&#x8D77;&#x6765;&#x4E0D;&#x518D;&#x50CF;&#x5411;&#x91CF;&#x4E86;&#x3002;&#x662F;&#x7684;&#xFF0C;&#x73B0;&#x5728;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x3002;&#x73B0;&#x5728;&#x67E5;&#x770B;&#x5411;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x770B;&#x770B;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x5B50;&#x7684;&#x3002;</p>
+<pre><code>&gt; my_vector
+     [, 1] [, 2] [, 3] [, 4] [, 5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>class()</code> &#x51FD;&#x6570;&#x6765;&#x786E;&#x8BA4;&#x4E00;&#x4E0B;&#x5B83;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x3002;&#x8F93;&#x5165; <code>class(my_vector)</code> &#x5F00;&#x67E5;&#x770B;&#x6211;&#x7684;&#x610F;&#x601D;&#x3002;</p>
+<pre><code>&gt; class(my_vector)
+[1] &quot;matrix&quot;
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;<code>my_vector</code> &#x73B0;&#x5728;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x3002;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x50A8;&#x5B58;&#x5B83;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8BB0;&#x4F4F;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x5B58;&#x50A8; <code>my_vector</code> &#x7684;&#x503C;&#x4E3A;&#x65B0;&#x5411;&#x91CF; <code>my_matrix</code> &#x3002;</p>
+<pre><code>&gt; my_matrix &lt;- my_vector
+</code></pre><p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x793A;&#x4F8B;&#x662F;&#x4E3A;&#x4E86;&#x8BF4;&#x660E;&#x4E00;&#x4E2A;&#x89C2;&#x70B9;&#xFF0C;&#x5373;&#x77E9;&#x9635;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x7EF4;&#x5EA6;&#x5C5E;&#x6027;&#x7684;&#x539F;&#x5B50;&#x5411;&#x91CF;&#x3002;&#x521B;&#x5EFA;&#x76F8;&#x540C;&#x77E9;&#x9635;&#x7684;&#x66F4;&#x76F4;&#x63A5;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528; <code>matrix()</code> &#x51FD;&#x6570;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x4F7F;&#x7528; <code>?</code> &#x51FD;&#x6570;&#x6253;&#x5F00; <code>matrix()</code> &#x51FD;&#x6570;&#x7684;&#x5E2E;&#x52A9;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code>&gt; ?matrix
+matrix                  package:base                   R Documentation
+
+Matrices
+
+Description:
+
+     &#x2018;matrix&#x2019; creates a matrix from the given set of values.
+
+     &#x2018;as.matrix&#x2019; attempts to turn its argument into a matrix.
+
+     &#x2018;is.matrix&#x2019; tests if its argument is a (strict) matrix.
+
+Usage:
+
+     matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE,
+            dimnames = NULL)
+
+     as.matrix(x, ...)
+     ## S3 method for class &apos;data.frame&apos;
+     as.matrix(x, rownames.force = NA, ...)
+
+     is.matrix(x)
+...
+Examples:
+
+     is.matrix(as.matrix(1:10))
+     ! is.matrix(warpbreaks)  # data.frame, NOT matrix!
+     warpbreaks [1:10,]
+     as.matrix(warpbreaks [1:10,])  # using as.matrix.data.frame(.) method
+
+     ## Example of setting row and column names
+     mdat &lt;- matrix(c(1, 2, 3, 11, 12, 13), nrow = 2, ncol = 3, byrow = TRUE,
+                    dimnames = list(c(&quot;row1&quot;, &quot;row2&quot;),
+                                    c(&quot;C.1&quot;, &quot;C.2&quot;, &quot;C.3&quot;)))
+     mdat
+
+
+(END)
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x67E5;&#x770B; <code>matrix</code> &#x51FD;&#x6570;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x770B;&#x770B;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>matrix()</code> &#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x5305;&#x542B;&#x76F8;&#x540C;&#x6570;&#x5B57;&#xFF08;1-20&#xFF09;&#x548C;&#x7EF4;&#x6570;&#xFF08;4 &#x884C;&#xFF0C;5 &#x5217;&#xFF09;&#x7684;&#x77E9;&#x9635;&#x3002;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>my_matrix2</code> &#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;</p>
+<pre><code>&gt; my_matrix2 &lt;- matrix(1:20, nrow = 4, ncol = 5)
+</code></pre><p>&#x6700;&#x540E;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x786E;&#x8BA4;&#x4E00;&#x4E0B; <code>my_matrix</code> &#x548C; <code>my_matrix2</code> &#x662F;&#x5426;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x3002; <code>identical()</code> &#x51FD;&#x6570;&#x5C06;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5426;&#x76F8;&#x540C;&#x3002;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code>&gt; identical(my_matrix, my_matrix2)
+[1] TRUE
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x5047;&#x8BBE;&#x8868;&#x683C;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x8868;&#x793A;&#x6765;&#x81EA;&#x4E34;&#x5E8A;&#x5B9E;&#x9A8C;&#x7684;&#x4E00;&#x4E9B;&#x6D4B;&#x91CF;&#x503C;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x4E00;&#x884C;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x60A3;&#x8005;&#xFF0C;&#x6BCF;&#x4E00;&#x5217;&#x8868;&#x793A;&#x6D4B;&#x91CF;&#x7684;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x6807;&#x8BB0;&#x8FD9;&#x4E9B;&#x884C;&#xFF0C;&#x4EE5;&#x4FBF;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x54EA;&#x4E9B;&#x6570;&#x5B57;&#x5C5E;&#x4E8E;&#x5B9E;&#x9A8C;&#x4E2D;&#x7684;&#x54EA;&#x4F4D;&#x75C5;&#x4EBA;&#xFF0C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x5411;&#x77E9;&#x9635;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x5217;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6240;&#x6709;&#x56DB;&#x4E2A;&#x4EBA;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x4ECE;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x5F00;&#x59CB;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6211;&#x4EEC;&#x7684;&#x75C5;&#x4EBA;&#x7684;&#x540D;&#x5B57;&#xFF1A;<code>Bill</code>&#x3001;<code>Gina</code>&#x3001;<code>Kelly</code> &#x548C; <code>Sean</code>&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x53CC;&#x5F15;&#x53F7;&#x544A;&#x8BC9; R &#x67D0;&#x4E2A;&#x4E1C;&#x897F;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>patients</code> &#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;</p>
+<pre><code>&gt; patients &lt;- c(&quot;Bill&quot;, &quot;Gina&quot;, &quot;Kelly&quot;, &quot;Sean&quot;)
+</code></pre><p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528; <code>cbind()</code> &#x51FD;&#x6570;&#x5408;&#x5E76;&#x5217;&#x3002;&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x65B0;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x53EA;&#x9700;&#x8C03;&#x7528; <code>cbind()</code> &#x7684;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;<code>patients</code> &#x548C; <code>my_matrix</code>&#x3002;</p>
+<pre><code>&gt; cbind(patients, my_matrix)
+     patients
+[1,] &quot;Bill&quot;   &quot;1&quot; &quot;5&quot; &quot;9&quot;  &quot;13&quot; &quot;17&quot;
+[2,] &quot;Gina&quot;   &quot;2&quot; &quot;6&quot; &quot;10&quot; &quot;14&quot; &quot;18&quot;
+[3,] &quot;Kelly&quot;  &quot;3&quot; &quot;7&quot; &quot;11&quot; &quot;15&quot; &quot;19&quot;
+[4,] &quot;Sean&quot;   &quot;4&quot; &quot;8&quot; &quot;12&quot; &quot;16&quot; &quot;20&quot;
+</code></pre><p>&#x6211;&#x4EEC;&#x7684;&#x7ED3;&#x679C;&#x6709;&#x70B9;&#x53EF;&#x7591;&#xFF01;&#x5176;&#x5C06;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x4E0E;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x5B57;&#x77E9;&#x9635;&#x76F8;&#x7ED3;&#x5408;&#xFF0C;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x90FD;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5269;&#x4E0B;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x77E9;&#x9635;&#xFF0C;&#x8FD9;&#x53EF;&#x4E0D;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x8BB0;&#x5F97;&#x8FD9;&#x5802;&#x8BFE;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x544A;&#x8BC9;&#x8FC7;&#x4F60;&#xFF0C;&#x77E9;&#x9635;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x4E00;&#x7C7B;&#x6570;&#x636E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x8BD5;&#x56FE;&#x5C06;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x4E0E;&#x6570;&#x5B57;&#x77E9;&#x9635;&#x7EC4;&#x5408;&#x65F6;&#xFF0C;R &#x88AB;&#x8FEB;&#x5C06;&#x6570;&#x5B57; <code>&#x201C;&#x5F3A;&#x8FEB;&#x201D;</code> &#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x4F7F;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#x3002;</p>
+<p>&#x8FD9;&#x88AB;&#x79F0;&#x4E3A; <code>&#x201C;&#x9690;&#x6027;&#x5F3A;&#x8FEB;&#x201D;</code>&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x8981;&#x6C42;&#x5B83;&#x8FD9;&#x4E48;&#x505A;&#x3002;&#x5B83;&#x53EA;&#x662F;&#x53D1;&#x751F;&#x3002;&#x4F46;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x628A;&#x75C5;&#x4EBA;&#x7684;&#x540D;&#x5B57;&#x8F6C;&#x6362;&#x6210;&#x6570;&#x5B57;&#x5462;&#x6211;&#x8BA9;&#x4F60;&#x4EEC;&#x81EA;&#x5DF1;&#x601D;&#x8003;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x9762;&#x4E34;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x4F55;&#x5728;&#x4E0D;&#x7834;&#x574F;&#x6570;&#x5B57;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8868;&#x683C;&#x4E2D;&#x5305;&#x542B;&#x60A3;&#x8005;&#x7684;&#x59D3;&#x540D;&#x3002;&#x8BD5;&#x8BD5;&#x4E0B;&#x9762;&#x7684;&#x6307;&#x4EE4; <code>my_data &lt;- data.frame(patients, my matrix)</code></p>
+<pre><code>&gt; my_data &lt;- data.frame(patients, my_matrix)
+&gt; my_data
+  patients X1 X2 X3 X4 X5
+1     Bill  1  5  9 13 17
+2     Gina  2  6 10 14 18
+3    Kelly  3  7 11 15 19
+4     Sean  4  8 12 16 20
+</code></pre><p>&#x770B;&#x8D77;&#x6765; <code>data.frame()</code> &#x51FD;&#x6570;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5C06;&#x540D;&#x79F0;&#x7684;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x5B57;&#x77E9;&#x9635;&#x65C1;&#x8FB9;&#x3002;&#x8FD9;&#x6B63;&#x662F;&#x6211;&#x4EEC;&#x6240;&#x5E0C;&#x671B;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x540E;&#x53F0;&#xFF0C;<code>data.frame()</code> &#x51FD;&#x6570;&#x63A5;&#x6536;&#x4EFB;&#x4F55;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7531;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#x7EC4;&#x6210;&#x7684;&#x7C7B; <code>data.frame</code> &#x7684;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x8C03;&#x7528; <code>class()</code> &#x51FD;&#x6570;&#x6765;&#x9A8C;&#x8BC1;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x6570;&#x636E;&#x6846;&#x7684;&#x7C7B;&#x522B;&#x3002;</p>
+<pre><code>&gt; class(my_data)
+[1] &quot;data.frame&quot;
+</code></pre><p>&#x8FD8;&#x53EF;&#x4EE5;&#x4E3A;&#x6570;&#x636E;&#x6846;&#x67B6;&#x7684;&#x884C;&#x548C;&#x5217;&#x5206;&#x914D;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x662F;&#x786E;&#x5B9A;&#x8868;&#x683C;&#x4E2D;&#x54EA;&#x4E00;&#x884C;&#x503C;&#x5C5E;&#x4E8E;&#x54EA;&#x4F4D;&#x60A3;&#x8005;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x53EF;&#x80FD;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x65E2;&#x7136;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x4E48;&#x8BA9;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E3A;&#x6570;&#x636E;&#x6846;&#x67B6;&#x7684;&#x5217;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x6765;&#x89E3;&#x51B3;&#x53E6;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x6BCF;&#x4E00;&#x5217;&#x4EE3;&#x8868;&#x7684;&#x5EA6;&#x91CF;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x6709; 6 &#x5217;&#xFF08;&#x5305;&#x62EC;&#x75C5;&#x4EBA;&#x59D3;&#x540D;&#x5217;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x5176;&#x5305;&#x542B;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>&quot;patient&quot;</code>, <code>&quot;age&quot;</code>, <code>&quot;weight&quot;</code>, <code>&quot;bp&quot;</code>, <code>&quot;rating&quot;</code>, <code>&quot;test&quot;</code> &#x540D;&#x4E3A; <code>cnames</code> &#x7684;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x3002;</p>
+<pre><code>&gt; cnames &lt;- c(&quot;patient&quot;, &quot;age&quot;, &quot;weight&quot;, &quot;bp&quot;, &quot;rating&quot;, &quot;test&quot;)
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x4F7F;&#x7528; <code>colnames()</code> &#x51FD;&#x6570;&#x4E3A;&#x6570;&#x636E;&#x6846;&#x8BBE;&#x7F6E; <code>colnames</code> &#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x548C;&#x672C;&#x8BFE;&#x524D;&#x9762;&#x5B66;&#x5230; <code>dim()</code> &#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#x76F8;&#x4F3C;&#x3002;</p>
+<pre><code>&gt; colnames(my_data) &lt;- cnames
+&gt; my_data
+  patient age weight bp rating test
+1    Bill   1      5  9     13   17
+2    Gina   2      6 10     14   18
+3   Kelly   3      7 11     15   19
+4    Sean   4      8 12     16   20
+</code></pre><p>&#x5728;&#x672C;&#x8282;&#x8BFE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E86;&#x4E24;&#x4E2A;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x548C;&#x5E38;&#x89C1;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;&#x77E9;&#x9635;&#x548C;&#x6570;&#x636E;&#x6846;&#xFF0C;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x3002;&#x5728;&#x4EE5;&#x540E;&#x7684;&#x8BFE;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x66F4;&#x591A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5173;&#x4E8E;&#x6570;&#x636E;&#x6846;&#x7684;&#x8FDB;&#x9636;&#x8BFE;&#x9898;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; xresearcher.com 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 
+2020-03-18 22:32:57
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lesson6.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 子集向量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"矩阵和数据框","level":"2.1.7","depth":2,"previous":{"title":"子集向量","level":"2.1.6","depth":2,"path":"R/RProgramming/lesson6.md","ref":"R/RProgramming/lesson6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","anchors","anchor-navigation-ex","splitter","advanced-emoji","edit-link","katex","sitemap-general","todo","copy-code-button","alerts","include-csv","klipse","disqus","tbfed-pagefooter","versions-select"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xresearcher.com 2020","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"},"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"data-xresearcher-com"},"todo":{},"splitter":{},"versions-select":{"type":"branches"},"sitemap-general":{"prefix":"https://data.xresearcher.com"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"alerts":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"versions":{"options":[{"value":"https://data.xresearcher.com","text":"数据科学学习手册"},{"value":"https://data1.xresearcher.com","text":"示例：下拉菜单01"},{"value":"https://data0.xresearcher.com","text":"示例：下拉菜单02"}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/x-researcher/data/tree/master/gitbook-source"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Jonathon","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据科学学习手册","language":"zh-hans","links":{"sidebar":{"Home":"https://xresearcher.com"}},"gitbook":"*","description":"学习资料的整理","direction":"ltr"},"file":{"path":"R/RProgramming/lesson7.md","mtime":"2020-03-18T14:32:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-18T14:35:17.562Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
