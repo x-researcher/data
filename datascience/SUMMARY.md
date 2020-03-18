@@ -9,3 +9,4 @@
     * [向量](R/RProgramming/lesson4.md)
     * [缺失值](R/RProgramming/lesson5.md)
     * [子集向量](R/RProgramming/lesson6.md)
+    * [矩阵和数据框](R/RProgramming/lesson7.md)
