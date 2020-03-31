@@ -24,6 +24,7 @@ build/Release
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 datascience/node_modules
 datascience/_book
+datascience/gitbook serve.bat
 datascience/book.pdf
 datascience/book.epub
 datascience/book.mobi

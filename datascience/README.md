@@ -4,5 +4,11 @@
 
 数据科学的主要语言为 `R` 和 `Python`，一直非常喜欢 `Python`，但没有系统性的学习，将来补上这方面知识，而为了目前的科研数据分析，先学习 `R` 语言。
 
-目前正在学习的课程：
-- [ ] [R Programming](https://github.com/swirldev/swirl_courses/tree/master/R_Programming)
+DONE：
+- [x] [R Programming](https://github.com/swirldev/swirl_courses/tree/master/R_Programming)
+
+TO-DO:
+- [ ] [Regression Models](https://github.com/swirldev/swirl_courses)
+- [ ] [Getting and Cleaning Data](https://github.com/swirldev/swirl_courses)
+- [ ] [Statistical Inference](https://github.com/swirldev/swirl_courses)
+- [ ] [Advanced R Programming](https://github.com/swirldev/swirl_courses)

@@ -39,11 +39,11 @@ R
 - [x] 5. Missing Values
 - [x] 6. Subsetting Vectors
 - [x] 7. Matrices and Data Frames
-- [ ] 8. Logic
-- [ ] 9. Functions
-- [ ] 10. lapply and sapply
-- [ ] 11. vapply and tapply 
-- [ ] 12. Looking at Data
-- [ ] 13. Simulation
-- [ ] 14. Dates and Times
-- [ ] 15. Base Graphics
+- [x] 8. Logic
+- [x] 9. Functions
+- [x] 10. lapply and sapply
+- [x] 11. vapply and tapply 
+- [x] 12. Looking at Data
+- [x] 13. Simulation
+- [x] 14. Dates and Times
+- [x] 15. Base Graphics
