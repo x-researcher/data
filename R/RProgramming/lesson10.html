@@ -1,0 +1,1063 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>lapply 和 sapply 函数 · 数据科学学习手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jonathon">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lesson11.html" />
+    
+    
+    <link rel="prev" href="lesson9.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://xresearcher.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    R 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="lesson1.html">
+            
+                <a href="lesson1.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    基本构件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="lesson2.html">
+            
+                <a href="lesson2.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    工作空间和文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="lesson3.html">
+            
+                <a href="lesson3.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="lesson4.html">
+            
+                <a href="lesson4.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="lesson5.html">
+            
+                <a href="lesson5.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    缺失值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="lesson6.html">
+            
+                <a href="lesson6.html">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    子集向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="lesson7.html">
+            
+                <a href="lesson7.html">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    矩阵和数据框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="lesson8.html">
+            
+                <a href="lesson8.html">
+            
+                    
+                        <b>1.2.8.</b>
+                    
+                    逻辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="lesson9.html">
+            
+                <a href="lesson9.html">
+            
+                    
+                        <b>1.2.9.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.10" data-path="lesson10.html">
+            
+                <a href="lesson10.html">
+            
+                    
+                        <b>1.2.10.</b>
+                    
+                    lapply 和 sapply 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="lesson11.html">
+            
+                <a href="lesson11.html">
+            
+                    
+                        <b>1.2.11.</b>
+                    
+                    vapply 和 tapply 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="lesson12.html">
+            
+                <a href="lesson12.html">
+            
+                    
+                        <b>1.2.12.</b>
+                    
+                    查看数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="lesson13.html">
+            
+                <a href="lesson13.html">
+            
+                    
+                        <b>1.2.13.</b>
+                    
+                    随机模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="lesson14.html">
+            
+                <a href="lesson14.html">
+            
+                    
+                        <b>1.2.14.</b>
+                    
+                    日期和时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="lesson15.html">
+            
+                <a href="lesson15.html">
+            
+                    
+                        <b>1.2.15.</b>
+                    
+                    基本图形
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Regression%20Models/">
+            
+                <a href="../Regression%20Models/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    回归模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >lapply 和 sapply 函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#lesson-10-lapply-&#x548C;-sapply"><b></b>Lesson 10: lapply &#x548C; sapply</a></li><ul><li><span class="title-icon "></span><a href="#&#x672C;&#x8BFE;&#x603B;&#x7ED3;"><b></b>&#x672C;&#x8BFE;&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;"><b></b>&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;</a></li></ul></ul></div><a href="#lesson-10-lapply-&#x548C;-sapply" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="lesson-10-lapply-&#x548C;-sapply"><a name="lesson-10-lapply-&#x548C;-sapply" class="anchor-navigation-ex-anchor" href="#lesson-10-lapply-&#x548C;-sapply"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lesson-10-lapply-&#x548C;-sapply" class="plugin-anchor" href="#lesson-10-lapply-&#x548C;-sapply"><i class="fa fa-link" aria-hidden="true"></i></a>Lesson 10: lapply &#x548C; sapply</h1>
+<h2 id="&#x672C;&#x8BFE;&#x603B;&#x7ED3;"><a name="&#x672C;&#x8BFE;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x8BFE;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672C;&#x8BFE;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x672C;&#x8BFE;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x8BFE;&#x603B;&#x7ED3;</h2>
+<p>&#x5728;&#x672C;&#x8BFE;&#x4E2D;&#xFF0C;&#x60A8;&#x5B66;&#x4E60;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5F3A;&#x5927;&#x7684; <code>lapply()</code> &#x548C; <code>sapply()</code> &#x51FD;&#x6570;&#x5BF9;&#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<ol>
+<li><code>lapply()</code> &#x5BF9;&#x5217;&#x8868;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;&#x5217;&#x8868;&#x3002;</li>
+<li><code>sapply()</code> &#x548C; <code>lapply()</code> &#x7684;&#x7528;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x5C1D;&#x8BD5;&#x7B80;&#x5316; <code>lapply()</code> &#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6240;&#x4EE5;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x662F;&#x77E9;&#x9635;&#x6216;&#x5411;&#x91CF;&#x3002;</li>
+</ol>
+<h2 id="&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;"><a name="&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;" class="plugin-anchor" href="#&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x8BFE;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;</h2>
+<p>&#x672C;&#x8282;&#x8BFE;&#x4E2D;&#xFF0C;&#x60A8;&#x5C06;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528; <code>lapply()</code> &#x548C; <code>sapply()</code> &#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x662F; R &#x7684; <code>apply()</code> &#x51FD;&#x6570;&#x5BB6;&#x65CF;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#x6210;&#x5458;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x5FAA;&#x73AF;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x5F3A;&#x5927;&#x7684;&#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x8FD1;&#x4EB2; ( <code>vapply()</code> &#x548C; <code>tapply()</code> &#x7B49;) &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7B80;&#x6D01;&#x800C;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x5206;&#x6790;&#x7684;<code>Split-Apply-Combine Strategy</code>&#xFF08;&#x5316;&#x6574;&#x4E3A;&#x96F6;&#x7684;&#x7B56;&#x7565;&#xFF09;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x51FD;&#x6570;&#x5C06;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x5206;&#x5272;&#x6210;&#x66F4;&#x5C0F;&#x7684;&#x5757;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;&#x5757;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x5408;&#x5E76;&#x51FA;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x8BFE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528; UCI &#x673A;&#x5668;&#x5B66;&#x4E60;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x56FD;&#x65D7;&#x6570;&#x636E;&#x96C6;&#x3002;&#x6B64;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5404;&#x4E2A;&#x56FD;&#x5BB6;&#x53CA;&#x5176;&#x56FD;&#x65D7;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;&#x66F4;&#x591A;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A; <a href="http://archive.ics.uci.edu/ml/datasets/Flags" target="_blank">http://archive.ics.uci.edu/ml/datasets/Flags</a></p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5F00;&#x59CB;&#xFF0C;&#x8FD9;&#x6837;&#x4F60;&#x5C31;&#x80FD;&#x5BF9;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x51FD;&#x6570;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x6709;&#x4E2A;&#x611F;&#x89C9;&#x3002;</p>
+<p>&#x6211;&#x5C06;&#x6570;&#x636E;&#x96C6;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>flags</code> &#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x952E;&#x5165; <code>head(flags)</code> &#x6765;&#x9884;&#x89C8;&#x6570;&#x636E;&#x96C6;&#x7684;&#x524D;&#x516D;&#x884C;&#x3002;</p>
+<pre><code>&gt; head(flags)
+            name landmass zone area population language religion bars stripes colours red green blue gold white black orange
+1    Afghanistan        5    1  648         16       10        2    0       3       5   1     1    0    1     1     1      0
+2        Albania        3    1   29          3        6        6    0       0       3   1     0    0    1     0     1      0
+3        Algeria        4    1 2388         20        8        2    2       0       3   1     1    0    0     1     0      0
+4 American-Samoa        6    3    0          0        1        1    0       0       5   1     0    1    1     1     0      1
+5        Andorra        3    1    0          0        6        0    3       0       3   1     0    1    1     0     0      0
+6         Angola        4    2 1247          7       10        5    0       2       3   1     0    0    1     0     1      0
+  mainhue circles crosses saltires quarters sunstars crescent triangle icon animate text topleft botright
+1   green       0       0        0        0        1        0        0    1       0    0   black    green
+2     red       0       0        0        0        1        0        0    0       1    0     red      red
+3   green       0       0        0        0        1        1        0    0       0    0   green    white
+4    blue       0       0        0        0        0        0        1    1       1    0    blue      red
+5    gold       0       0        0        0        0        0        0    0       0    0    blue      red
+6     red       0       0        0        0        1        0        0    1       0    0     red    black
+</code></pre><p>&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5411;&#x4E0A;&#x6EDA;&#x52A8;&#x624D;&#x80FD;&#x770B;&#x5230;&#x6240;&#x6709;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>dim(flags)</code> &#x6765;&#x68C0;&#x67E5;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7EF4;&#x5EA6;&#x3002;</p>
+<pre><code>&gt; dim(flags)
+[1] 194  30
+</code></pre><p>&#x7ED3;&#x679C;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#xFF0C;&#x6709; 194 &#x884C;&#xFF0C;&#x6216;&#x89C2;&#x5BDF;&#x503C;&#xFF0C;&#x548C; 30 &#x5217;&#xFF0C;&#x6216;&#x53D8;&#x91CF;&#x3002;&#x6BCF;&#x4E2A;&#x89C2;&#x5BDF;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x56FD;&#x5BB6;&#xFF0C;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x56FD;&#x5BB6;&#x6216;&#x56FD;&#x65D7;&#x7684;&#x7279;&#x5F81;&#x3002;&#x4F7F;&#x7528; <code>viewinfo()</code> &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5B8C;&#x6574;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x60F3;&#x77E5;&#x9053;&#x53D8;&#x91CF;&#x662F;&#x4EE5;&#x4EC0;&#x4E48;&#x683C;&#x5F0F;&#x5B58;&#x50A8;&#x7684;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>class(flags)</code> &#x67E5;&#x770B;&#x3002;</p>
+<pre><code>&gt; class(flags)
+[1] &quot;data.frame&quot;
+</code></pre><p>&#x5B83;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x662F;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x6846;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x8FD9;&#x6CA1;&#x6709;&#x56DE;&#x7B54;&#x6211;&#x4EEC;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x662F;&#x5BF9;&#x6BCF;&#x4E00;&#x5217;&#x90FD;&#x8C03;&#x7528; <code>class()</code> &#x51FD;&#x6570;&#x3002;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5B8C;&#x6210;&#xFF08;&#x5373;&#x4E00;&#x6B21;&#x4E00;&#x5217;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x80FD;&#x81EA;&#x52A8;&#x5316;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x901F;&#x5EA6;&#x4F1A;&#x5FEB;&#x5F97;&#x591A;&#x3002;&#x542C;&#x8D77;&#x6765;&#x50CF;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#xFF01;</p>
+<p><code>lapply()</code> &#x51FD;&#x6570;&#x63A5;&#x6536;&#x5217;&#x8868;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x5BF9;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4E0E;&#x539F;&#x59CB;&#x5217;&#x8868;&#x957F;&#x5EA6;&#x76F8;&#x540C;&#x7684;&#x5217;&#x8868;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x6570;&#x636E;&#x6846;&#x53EA;&#x662F;&#x5411;&#x91CF;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>lapply()</code> &#x5C06; <code>class()</code> &#x51FD;&#x6570;&#x5E94;&#x7528;&#x5230; <code>flags</code> &#x6570;&#x636E;&#x96C6;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x4F5C;&#x7684;&#x3002;</p>
+<p>&#x952E;&#x5165; <code>cls_list &lt;- lapply(flags, class)</code> &#x6765;&#x5BF9;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x5E94;&#x7528; <code>class()</code> &#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x50A8;&#x5B58;&#x5728;&#x540D;&#x4E3A; <code>cls_list</code> &#x7684;&#x53D8;&#x91CF;&#x91CC;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x60A8;&#x53EA;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8981;&#x5E94;&#x7528;&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x540E;&#x9762;&#x4E0D;&#x9700;&#x8981;&#x62EC;&#x53F7;&#x3002;</p>
+<pre><code>&gt; cls_list &lt;- lapply(flags, class)
+&gt; cls_list
+$name
+[1] &quot;factor&quot;
+
+$landmass
+[1] &quot;integer&quot;
+
+$zone
+[1] &quot;integer&quot;
+
+$area
+[1] &quot;integer&quot;
+
+$population
+[1] &quot;integer&quot;
+
+$language
+[1] &quot;integer&quot;
+
+$religion
+[1] &quot;integer&quot;
+
+$bars
+[1] &quot;integer&quot;
+
+$stripes
+[1] &quot;integer&quot;
+
+$colours
+[1] &quot;integer&quot;
+
+$red
+[1] &quot;integer&quot;
+
+$green
+[1] &quot;integer&quot;
+
+$blue
+[1] &quot;integer&quot;
+
+$gold
+[1] &quot;integer&quot;
+
+$white
+[1] &quot;integer&quot;
+
+$black
+[1] &quot;integer&quot;
+
+$orange
+[1] &quot;integer&quot;
+
+$mainhue
+[1] &quot;factor&quot;
+
+$circles
+[1] &quot;integer&quot;
+
+$crosses
+[1] &quot;integer&quot;
+
+$saltires
+[1] &quot;integer&quot;
+
+$quarters
+[1] &quot;integer&quot;
+
+$sunstars
+[1] &quot;integer&quot;
+
+$crescent
+[1] &quot;integer&quot;
+
+$triangle
+[1] &quot;integer&quot;
+
+$icon
+[1] &quot;integer&quot;
+
+$animate
+[1] &quot;integer&quot;
+
+$text
+[1] &quot;integer&quot;
+
+$topleft
+[1] &quot;factor&quot;
+
+$botright
+[1] &quot;factor&quot;
+</code></pre><p><code>lapply</code> &#x4E2D;&#x7684; <code>l</code> &#x4EE3;&#x8868;&#x7684;&#x662F; <code>list</code>&#x3002;&#x952E;&#x5165; <code>class(cls_list)</code> &#x6765;&#x786E;&#x8BA4; <code>lapply()</code> &#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#x5217;&#x8868;&#x3002;</p>
+<pre><code>&gt; class(cls_list)
+[1] &quot;list&quot;
+</code></pre><p>&#x548C;&#x610F;&#x60F3;&#x4E2D;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; 30 &#x7684;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E00;&#x5217;&#x6216;&#x8005;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x8868;&#x793A;&#x6210;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x8F93;&#x51FA;&#x5C06;&#x4F1A;&#x66F4;&#x52A0;&#x7D27;&#x51D1;&#x3002;</p>
+<p>&#x60A8;&#x53EF;&#x80FD;&#x8FD8;&#x8BB0;&#x5F97;&#x4E4B;&#x524D;&#x7684;&#x8BFE;&#x7A0B;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#x5217;&#x8868;&#x5BF9;&#x4E8E;&#x5B58;&#x50A8;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6700;&#x6709;&#x5E2E;&#x52A9;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7531;&#x4E8E; <code>lapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x957F;&#x5EA6;&#x4E3A; 1 &#x7684;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#xFF08;&#x5373;&quot;&#x6574;&#x6570;&quot;&#x548C;&quot;&#x5411;&#x91CF;&quot;&#xFF09;&#xFF0C;&#x6240;&#x4EE5; <code>cls_list</code> &#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x3002;&#x8981;&#x624B;&#x52A8;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#xFF0C;&#x8BF7;&#x952E;&#x5165; <code>as.character(cls_list)</code></p>
+<pre><code>&gt; as.character(cls_list)
+ [1] &quot;factor&quot;  &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot;
+[13] &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;factor&quot;  &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot;
+[25] &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;integer&quot; &quot;factor&quot;  &quot;factor&quot;
+</code></pre><p><code>sapply()</code> &#x5141;&#x8BB8;&#x60A8;&#x901A;&#x8FC7;&#x5728;&#x5E55;&#x540E;&#x8C03;&#x7528; <code>lapply()</code> &#x6765;&#x81EA;&#x52A8;&#x5316;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x968F;&#x540E;&#x5C1D;&#x8BD5;&#x4E3A;&#x60A8;&#x7B80;&#x5316;&#x7ED3;&#x679C;&#xFF08;<code>sapply</code> &#x4E2D;&#x7684; <code>s</code> &#xFF09;&#x3002;&#x4F7F;&#x7528; <code>sapply()</code> &#x7684;&#x65B9;&#x5F0F;&#x4E0E;&#x4F7F;&#x7528; <code>lapply()</code> &#x7684;&#x65B9;&#x5F0F;&#x76F8;&#x540C;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6807;&#x8BB0;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728; <code>cls_vect</code> &#x4E2D;&#x3002;</p>
+<pre><code>&gt; cls_vect &lt;- sapply(flags, class)
+&gt; cls_vect
+      name   landmass       zone       area population   language   religion       bars    stripes    colours        red 
+  &quot;factor&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot; 
+     green       blue       gold      white      black     orange    mainhue    circles    crosses   saltires   quarters 
+ &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;   &quot;factor&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot; 
+  sunstars   crescent   triangle       icon    animate       text    topleft   botright 
+ &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;  &quot;integer&quot;   &quot;factor&quot;   &quot;factor&quot;
+</code></pre><p>&#x952E;&#x5165; <code>class(cls_vect)</code> &#x6765;&#x786E;&#x8BA4; <code>sapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5411;&#x91CF;&#x3002;</p>
+<pre><code>&gt; class(cls_vect)
+[1] &quot;character&quot;
+</code></pre><p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x7ED3;&#x679C;&#x662F;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x957F;&#x5EA6;&#x4E3A; 1 &#x7684;&#x5217;&#x8868;&#xFF0C;&#x4F7F;&#x7528; <code>sapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x5982;&#x679C;&#x7ED3;&#x679C;&#x662F;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x957F;&#x5EA6;(&gt;1)&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x90A3;&#x4E48; <code>sapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x3002;&#x5982;&#x679C; <code>sapply()</code> &#x65E0;&#x6CD5;&#x5206;&#x8FA8;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x548C; <code>lapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5E76;&#x65E0;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x518D;&#x7EC3;&#x4E60; <code>lapply()</code> &#x548C; <code>sapply()</code> !</p>
+<p>&#x6570;&#x636E;&#x96C6;&#x7684;&#x7B2C;11-17&#x5217;&#x662F;&#x6307;&#x793A;&#x53D8;&#x91CF;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x989C;&#x8272;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x5E94;&#x7684;&#x56FD;&#x5BB6;&#x7684;&#x56FD;&#x65D7;&#x5B58;&#x5728;&#x8FD9;&#x79CD;&#x989C;&#x8272;&#xFF0C;&#x5219;&#x503C;&#x4E3A; 1&#xFF0C;&#x5426;&#x5219;&#x4E3A; 0&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x77E5;&#x9053;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x542B;&#x6709;&#x67D0;&#x6307;&#x6807;&#x7684;&#x56FD;&#x5BB6;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x56FD;&#x65D7;&#x4E2D;&#x5305;&#x542B;&#x6A58;&#x8272;&#x7684;&#x56FD;&#x5BB6;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x6A58;&#x8272;&#x5217;&#x7684;&#x6240;&#x6709;&#x7684; 1 &#x548C; 0 &#x7684;&#x603B;&#x548C;&#x3002;&#x5C1D;&#x8BD5; <code>sum(flags$orange)</code> &#x6765;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code>&gt; sum(flags$orange)
+[1] 26
+</code></pre><p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x60F3;&#x4E3A;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x6BCF;&#x4E2A;&#x8BB0;&#x5F55;&#x7684;&#x989C;&#x8272;&#x90FD;&#x91CD;&#x590D;&#x6B64;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528; <code>flag_colors &lt;- flags[, 11:17]</code> &#x6765;&#x63D0;&#x53D6;&#x6240;&#x6709;&#x5305;&#x542B;&#x989C;&#x8272;&#x7684;&#x5217;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5B58;&#x50A8;&#x5728;&#x540D;&#x4E3A; <code>flag_colors</code> &#x7684;&#x6570;&#x636E;&#x6846;&#x4E2D;&#x3002;&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x5728;11:17&#x4E4B;&#x524D;&#x7684;&#x9017;&#x53F7;&#xFF0C;&#x5B83;&#x7684;&#x610F;&#x601D;&#x662F;&#x544A;&#x8BC9; R&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x6240;&#x6709;&#x7684;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x4EC5;&#x9700;11&#x81F3;17&#x5217;&#x3002;&#xFF09;</p>
+<pre><code>&gt; flag_colors &lt;- flags[, 11:17]
+</code></pre><p>&#x4F7F;&#x7528; <code>head()</code> &#x51FD;&#x6570;&#x6765;&#x67E5;&#x770B; <code>flag_colors</code> &#x7684;&#x524D; 6 &#x884C;&#x6570;&#x636E;&#x3002;</p>
+<pre><code>&gt; head(flag_colors)
+  red green blue gold white black orange
+1   1     1    0    1     1     1      0
+2   1     0    0    1     0     1      0
+3   1     1    0    0     1     0      0
+4   1     0    1    1     1     0      1
+5   1     0    1    1     0     0      0
+6   1     0    0    1     0     1      0
+</code></pre><p>&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>flag_colors</code> &#x6BCF;&#x4E00;&#x5217;&#x603B;&#x548C;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x8C03;&#x7528;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7684; <code>lapply()</code> &#x51FD;&#x6570;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x9700;&#x8981;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x4F8B; <code>flag_colors</code>&#xFF09;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5E94;&#x7528;&#x5230;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x4F8B; <code>sum</code>&#xFF09;&#x3002;&#x8BB0;&#x4F4F;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E0D;&#x9700;&#x8981;&#x51FD;&#x6570;&#x540D;&#x5B57;&#x540E;&#x9762;&#x7684;&#x53CC;&#x62EC;&#x53F7;&#x3002;</p>
+<pre><code>&gt; lapply(flag_colors, sum)
+$red
+[1] 153
+
+$green
+[1] 91
+
+$blue
+[1] 99
+
+$gold
+[1] 91
+
+$white
+[1] 146
+
+$black
+[1] 52
+
+$orange
+[1] 26
+</code></pre><p>&#x7ED3;&#x679C;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;194&#x4E2A;&#x56FD;&#x65D7;&#x4E2D;&#xFF0C;153&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x7EA2;&#x8272;&#xFF0C;91&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x7EFF;&#x8272;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x7ED3;&#x679C;&#x662F;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x56E0;&#x6B64; <code>lapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x3002;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x957F;&#x5EA6;&#x4E3A; 1 &#x7684;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x7ED3;&#x679C;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>sapply()</code> &#x800C;&#x4E0D;&#x662F; <code>lapply()</code> &#x7B80;&#x5316;&#x6210;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x73B0;&#x5728;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code>&gt; sapply(flag_colors, sum)
+   red  green   blue   gold  white  black orange 
+   153     91     99     91    146     52     26
+</code></pre><p>&#x5305;&#x542B;&#x6BCF;&#x4E2A;&#x989C;&#x8272;&#x7684;&#x56FD;&#x65D7;&#x6240;&#x5360;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x4E5F;&#x8BB8;&#x662F;&#x66F4;&#x52A0;&#x91CD;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x5217;&#x90FD;&#x662F;&#x4E00;&#x4E32; 1, 0 &#x6570;&#x636E;&#xFF0C;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x7B97;&#x672F;&#x5E73;&#x5747;&#x503C;&#x5C31;&#x662F;&#x503C;&#x4E3A; 1 &#x7684;&#x6570;&#x636E;&#x6240;&#x5360;&#x7684;&#x6BD4;&#x4F8B;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>sapply()</code> &#x8C03;&#x7528; <code>mean()</code> &#x51FD;&#x6570;&#x6765;&#x8BA1;&#x7B97; <code>flag_color</code> &#x6BCF;&#x4E00;&#x5217;&#x7684;&#x5E73;&#x5747;&#x503C;&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x53EA;&#x5217;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4E0D;&#x52A0;&#x53CC;&#x62EC;&#x53F7;&#x3002;</p>
+<pre><code>&gt; sapply(flag_colors, mean)
+      red     green      blue      gold     white     black    orange 
+0.7886598 0.4690722 0.5103093 0.4690722 0.7525773 0.2680412 0.1340206
+</code></pre><p>&#x5728;&#x6211;&#x4EEC;&#x76EE;&#x524D;&#x770B;&#x5230;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;<code>sapply()</code> &#x5DF2;&#x7ECF;&#x5C06;&#x7ED3;&#x679C;&#x7B80;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; <code>lapply()</code> &#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x957F;&#x5EA6;&#x4E3A; 1 &#x7684;&#x5411;&#x91CF;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;&#x3002;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E; 1&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5E94;&#x8BE5;&#x662F;&#x4E2A;&#x77E9;&#x9635;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x9610;&#x660E;&#x8FD9;&#x70B9;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x63D0;&#x53D6;&#x51FA;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7B2C;19-23&#x5217;&#xFF0C;&#x5E76;&#x5B58;&#x50A8;&#x5728;&#x540D;&#x4E3A; <code>flag_shapes</code> &#x7684;&#x6570;&#x636E;&#x6846;&#x91CC;&#x3002;<code>flag_shapes &lt;- flags[, 19:23]</code> &#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x3002; </p>
+<pre><code>&gt; flag_shapes &lt;- flags[, 19:23]
+</code></pre><p>&#x6BCF;&#x4E00;&#x5217;&#xFF08;&#x4F8B;&#xFF0C;&#x53D8;&#x91CF;&#xFF09;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x67D0;&#x4E00;&#x7279;&#x5B9A;&#x5F62;&#x72B6;&#x6216;&#x56FE;&#x6848;&#x51FA;&#x73B0;&#x5728;&#x4E00;&#x56FD;&#x56FD;&#x65D7;&#x4E0A;&#x7684;&#x6B21;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x5BF9;&#x6BCF;&#x4E2A;&#x5F62;&#x72B6;&#x6216;&#x56FE;&#x6848;&#x51FA;&#x73B0;&#x7684;&#x6700;&#x5927;&#x548C;&#x6700;&#x5C0F;&#x6B21;&#x6570;&#x611F;&#x5174;&#x8DA3;&#x3002;</p>
+<p><code>range()</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x6700;&#x5C0F;&#x548C;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x7ED3;&#x679C;&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x5411;&#x91CF;&#x3002;&#x4F7F;&#x7528; <code>lapply()</code> &#x5BF9; <code>flag_shapes</code> &#x8C03;&#x7528; range &#x51FD;&#x6570;&#x3002;</p>
+<pre><code>&gt; lapply(flag_shapes, range)
+$circles
+[1] 0 4
+
+$crosses
+[1] 0 2
+
+$saltires
+[1] 0 1
+
+$quarters
+[1] 0 4
+
+$sunstars
+[1]  0 50
+</code></pre><p>&#x518D;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x76F8;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x4F7F;&#x7528; <code>sapply()</code> &#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x4E3A;&#x540D;&#x79F0;&#x662F; <code>shape_mat</code> &#x7684;&#x53D8;&#x91CF;&#x3002;</p>
+<pre><code>&gt; shape_mat &lt;- sapply(flag_shapes, range)
+&gt; shape_mat
+     circles crosses saltires quarters sunstars
+[1,]       0       0        0        0        0
+[2,]       4       2        1        4       50
+</code></pre><p>&#x4F7F;&#x7528; <code>class()</code> &#x51FD;&#x6570;&#x6765;&#x786E;&#x8BA4; <code>shape_mat</code> &#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x3002;</p>
+<pre><code>&gt; class(shape_mat)
+[1] &quot;matrix&quot;
+</code></pre><p>&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#xFF0C;<code>sapply()</code> &#x603B;&#x662F;&#x5C1D;&#x8BD5;&#x7B80;&#x5316; <code>lapply()</code> &#x7684;&#x7ED3;&#x679C;&#x3002;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x6240;&#x770B;&#x5230;&#x7684;&#x6BCF;&#x4E2A;&#x4F8B;&#x5B50;&#x90FD;&#x6210;&#x529F;&#x505A;&#x5230;&#x4E86;&#x8FD9;&#x4E00;&#x70B9;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>sapply()</code> &#x4E0D;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x7B80;&#x5316;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x4E0E; <code>lapply()</code> &#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x5F53;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x65F6;&#xFF0C;<code>unique()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5220;&#x9664;&#x4E86;&#x6240;&#x6709;&#x91CD;&#x590D;&#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;<code>unique()</code> &#x53EA;&#x8FD4;&#x56DE; <code>unique</code> &#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#x3002;&#x8981;&#x67E5;&#x770B;&#x5B83;&#x65F6;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5; <code>unique(c(3, 4, 5, 5, 5, 6, 6))</code>&#x3002;</p>
+<pre><code>&gt; unique(c(3, 4, 5, 5, 5, 6, 6))
+[1] 3 4 5 6
+</code></pre><p>&#x6211;&#x4EEC;&#x60F3;&#x77E5;&#x9053;&#x5728;&#x56FD;&#x65D7;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x552F;&#x4E00;&#x503C;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x4F7F;&#x7528; <code>lapply()</code> &#x5C06; <code>unique()</code> &#x51FD;&#x6570;&#x5E94;&#x7528;&#x5230;&#x56FD;&#x65D7;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>unique_vals</code> &#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;</p>
+<pre><code>&gt; unique_vals &lt;- lapply(flags, unique)
+&gt; unique_vals
+$name
+  [1] Afghanistan              Albania                  Algeria                  American-Samoa          
+  [5] Andorra                  Angola                   Anguilla                 Antigua-Barbuda         
+  [9] Argentina                Argentine                Australia                Austria                 
+ [13] Bahamas                  Bahrain                  Bangladesh               Barbados                
+ [17] Belgium                  Belize                   Benin                    Bermuda                 
+ [21] Bhutan                   Bolivia                  Botswana                 Brazil                  
+ [25] British-Virgin-Isles     Brunei                   Bulgaria                 Burkina                 
+ [29] Burma                    Burundi                  Cameroon                 Canada                  
+ [33] Cape-Verde-Islands       Cayman-Islands           Central-African-Republic Chad                    
+ [37] Chile                    China                    Colombia                 Comorro-Islands         
+ [41] Congo                    Cook-Islands             Costa-Rica               Cuba                    
+ [45] Cyprus                   Czechoslovakia           Denmark                  Djibouti                
+ [49] Dominica                 Dominican-Republic       Ecuador                  Egypt                   
+ [53] El-Salvador              Equatorial-Guinea        Ethiopia                 Faeroes                 
+ [57] Falklands-Malvinas       Fiji                     Finland                  France                  
+ [61] French-Guiana            French-Polynesia         Gabon                    Gambia                  
+ [65] Germany-DDR              Germany-FRG              Ghana                    Gibraltar               
+ [69] Greece                   Greenland                Grenada                  Guam                    
+ [73] Guatemala                Guinea                   Guinea-Bissau            Guyana                  
+ [77] Haiti                    Honduras                 Hong-Kong                Hungary                 
+ [81] Iceland                  India                    Indonesia                Iran                    
+ [85] Iraq                     Ireland                  Israel                   Italy                   
+ [89] Ivory-Coast              Jamaica                  Japan                    Jordan                  
+ [93] Kampuchea                Kenya                    Kiribati                 Kuwait                  
+ [97] Laos                     Lebanon                  Lesotho                  Liberia                 
+[101] Libya                    Liechtenstein            Luxembourg               Malagasy                
+[105] Malawi                   Malaysia                 Maldive-Islands          Mali                    
+[109] Malta                    Marianas                 Mauritania               Mauritius               
+[113] Mexico                   Micronesia               Monaco                   Mongolia                
+[117] Montserrat               Morocco                  Mozambique               Nauru                   
+[121] Nepal                    Netherlands              Netherlands-Antilles     New-Zealand             
+[125] Nicaragua                Niger                    Nigeria                  Niue                    
+[129] North-Korea              North-Yemen              Norway                   Oman                    
+[133] Pakistan                 Panama                   Papua-New-Guinea         Parguay                 
+[137] Peru                     Philippines              Poland                   Portugal                
+[141] Puerto-Rico              Qatar                    Romania                  Rwanda                  
+[145] San-Marino               Sao-Tome                 Saudi-Arabia             Senegal                 
+[149] Seychelles               Sierra-Leone             Singapore                Soloman-Islands         
+[153] Somalia                  South-Africa             South-Korea              South-Yemen             
+[157] Spain                    Sri-Lanka                St-Helena                St-Kitts-Nevis          
+[161] St-Lucia                 St-Vincent               Sudan                    Surinam                 
+[165] Swaziland                Sweden                   Switzerland              Syria                   
+[169] Taiwan                   Tanzania                 Thailand                 Togo                    
+[173] Tonga                    Trinidad-Tobago          Tunisia                  Turkey                  
+[177] Turks-Cocos-Islands      Tuvalu                   UAE                      Uganda                  
+[181] UK                       Uruguay                  US-Virgin-Isles          USA                     
+[185] USSR                     Vanuatu                  Vatican-City             Venezuela               
+[189] Vietnam                  Western-Samoa            Yugoslavia               Zaire                   
+[193] Zambia                   Zimbabwe                
+194 Levels: Afghanistan Albania Algeria American-Samoa Andorra Angola Anguilla Antigua-Barbuda Argentina Argentine ... Zimbabwe
+
+$landmass
+[1] 5 3 4 6 1 2
+
+$zone
+[1] 1 3 2 4
+
+$area
+  [1]   648    29  2388     0  1247  2777  7690    84    19     1   143    31    23   113    47  1099   600  8512     6   111
+ [21]   274   678    28   474  9976     4   623  1284   757  9561  1139     2   342    51   115     9   128    43    22    49
+ [41]   284  1001    21  1222    12    18   337   547    91   268    10   108   249   239   132  2176   109   246    36   215
+ [61]   112    93   103  3268  1904  1648   435    70   301   323    11   372    98   181   583   236    30  1760     3   587
+ [81]   118   333  1240  1031  1973  1566   447   783   140    41  1267   925   121   195   324   212   804    76   463   407
+[101]  1285   300   313    92   237    26  2150   196    72   637  1221    99   288   505    66  2506    63    17   450   185
+[121]   945   514    57     5   164   781   245   178  9363 22402    15   912   256   905   753   391
+
+$population
+ [1]   16    3   20    0    7   28   15    8   90   10    1    6  119    9   35    4   24    2   11 1008    5   47   31   54
+[25]   17   61   14  684  157   39   57  118   13   77   12   56   18   84   48   36   22   29   38   49   45  231  274   60
+
+$language
+ [1] 10  6  8  1  2  4  3  5  7  9
+
+$religion
+[1] 2 6 1 0 5 3 4 7
+
+$bars
+[1] 0 2 3 1 5
+
+$stripes
+ [1]  3  0  2  1  5  9 11 14  4  6 13  7
+
+$colours
+[1] 5 3 2 8 6 4 7 1
+
+$red
+[1] 1 0
+
+$green
+[1] 1 0
+
+$blue
+[1] 0 1
+
+$gold
+[1] 1 0
+
+$white
+[1] 1 0
+
+$black
+[1] 1 0
+
+$orange
+[1] 0 1
+
+$mainhue
+[1] green  red    blue   gold   white  orange black  brown 
+Levels: black blue brown gold green orange red white
+
+$circles
+[1] 0 1 4 2
+
+$crosses
+[1] 0 1 2
+
+$saltires
+[1] 0 1
+
+$quarters
+[1] 0 1 4
+
+$sunstars
+ [1]  1  0  6 22 14  3  4  5 15 10  7  2  9 50
+
+$crescent
+[1] 0 1
+
+$triangle
+[1] 0 1
+
+$icon
+[1] 1 0
+
+$animate
+[1] 0 1
+
+$text
+[1] 0 1
+
+$topleft
+[1] black  red    green  blue   white  orange gold  
+Levels: black blue gold green orange red white
+
+$botright
+[1] green  red    white  black  blue   gold   orange brown 
+Levels: black blue brown gold green orange red white
+</code></pre><p>&#x56E0;&#x4E3A; unique_vals &#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B66;&#x5230;&#x7684;&#x77E5;&#x8BC6;&#x6765;&#x786E;&#x5B9A; unique_vals &#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x5373;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x552F;&#x4E00;&#x503C;&#x7684;&#x6570;&#x91CF;&#xFF09;&#x3002;&#x5C3D;&#x53EF;&#x80FD;&#x7B80;&#x5316;&#x7ED3;&#x679C;&#x3002;&#x63D0;&#x793A;&#xFF1A;&#x5C06; length() &#x51FD;&#x6570;&#x5E94;&#x7528;&#x5230; unique_vals &#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x3002;</p>
+<pre><code>&gt; sapply(unique_vals, length)
+      name   landmass       zone       area population   language   religion       bars    stripes    colours        red 
+       194          6          4        136         48         10          8          5         12          8          2 
+     green       blue       gold      white      black     orange    mainhue    circles    crosses   saltires   quarters 
+         2          2          2          2          2          2          8          4          3          2          3 
+  sunstars   crescent   triangle       icon    animate       text    topleft   botright 
+        14          2          2          2          2          2          7          8
+</code></pre><p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;unique_vals &#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;&#x662F;&#x957F;&#x5EA6;&#x4E0D;&#x540C;&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x8FD9;&#x5BFC;&#x81F4;&#x4E86; sapply() &#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x660E;&#x663E;&#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x4F7F;&#x7528; sapply() &#x5E94;&#x7528; unique() &#x51FD;&#x6570;&#x5230; flags &#x6570;&#x636E;&#x96C6;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;&#x4EE5;&#x67E5;&#x770B;&#x662F;&#x5426;&#x5F97;&#x5230;&#x4E0E; lapply() &#x76F8;&#x540C;&#x7684;&#x672A;&#x7B80;&#x5316;&#x5217;&#x8868;&#x3002;</p>
+<pre><code>&gt; sapply(flags, unique)
+$name
+  [1] Afghanistan              Albania                  Algeria                  American-Samoa          
+  [5] Andorra                  Angola                   Anguilla                 Antigua-Barbuda         
+  [9] Argentina                Argentine                Australia                Austria                 
+ [13] Bahamas                  Bahrain                  Bangladesh               Barbados                
+ [17] Belgium                  Belize                   Benin                    Bermuda                 
+ [21] Bhutan                   Bolivia                  Botswana                 Brazil                  
+ [25] British-Virgin-Isles     Brunei                   Bulgaria                 Burkina                 
+ ...
+</code></pre><p>&#x6709;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x5C1A;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5728; R &#x4E2D;&#x7F16;&#x5199;&#x51FD;&#x6570;&#x8D85;&#x51FA;&#x4E86;&#x672C;&#x8BFE;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4F46;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x60A8;&#x53EA;&#x5BF9;&#x521A;&#x521A;&#x521B;&#x5EFA;&#x7684; <code>unique_vals</code> &#x5217;&#x8868;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x9879;&#x76EE;&#x521A;&#x5174;&#x8DA3;&#x3002;&#x56E0;&#x4E3A; <code>unique_vals</code> &#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x77E5;&#x9053; R &#x4E2D;&#x662F;&#x5426;&#x6709;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5411;&#x91CF;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C06;&#x6784;&#x4EF6;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p><code>lapply(unique_vals, function(elem) elem[2])</code> &#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>unique_vals</code> &#x5217;&#x8868;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7B2C;&#x4E8C;&#x9879;&#x76EE;&#x7684;&#x5217;&#x8868;&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x51FD;&#x6570;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x53C2;&#x6570; elem&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;&#x4F9D;&#x6B21;&#x53D6; <code>unique_vals</code> &#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;</p>
+<pre><code>&gt; lapply(unique_vals, function(elem) elem[2])
+$name
+[1] Albania
+194 Levels: Afghanistan Albania Algeria American-Samoa Andorra Angola Anguilla Antigua-Barbuda Argentina Argentine ... Zimbabwe
+
+$landmass
+[1] 3
+
+$zone
+[1] 3
+
+$area
+[1] 29
+
+$population
+[1] 3
+
+$language
+[1] 6
+
+$religion
+[1] 6
+
+$bars
+[1] 2
+
+$stripes
+[1] 0
+
+$colours
+[1] 3
+
+$red
+[1] 0
+
+$green
+[1] 0
+
+$blue
+[1] 1
+
+$gold
+[1] 0
+
+$white
+[1] 0
+
+$black
+[1] 0
+
+$orange
+[1] 1
+
+$mainhue
+[1] red
+Levels: black blue brown gold green orange red white
+
+$circles
+[1] 1
+
+$crosses
+[1] 1
+
+$saltires
+[1] 1
+
+$quarters
+[1] 1
+
+$sunstars
+[1] 0
+
+$crescent
+[1] 1
+
+$triangle
+[1] 1
+
+$icon
+[1] 0
+
+$animate
+[1] 1
+
+$text
+[1] 1
+
+$topleft
+[1] red
+Levels: black blue gold green orange red white
+
+$botright
+[1] red
+Levels: black blue brown gold green orange red white
+</code></pre><p>&#x524D;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x548C;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E4B;&#x95F4;&#x7684;&#x552F;&#x4E00;&#x533A;&#x522B;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x7528; <code>lapply()</code> &#x65F6;&#x5B9A;&#x4E49;&#x5E76;&#x4F7F;&#x7528;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x540D;&#x79F0;&#xFF0C;&#x4E00;&#x65E6; <code>lapply()</code> &#x4F7F;&#x7528;&#x5B8C;&#x6BD5;&#xFF0C;&#x4ED6;&#x5C31;&#x4F1A;&#x6D88;&#x5931;&#x3002;&#x5F53; R &#x7684;&#x67D0;&#x4E2A;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x4E0D;&#x53EF;&#x7528;&#x65F6;&#xFF0C;&#x6240;&#x8C13;&#x7684;<code>&#x533F;&#x540D;&#x51FD;&#x6570;</code>&#x5C31;&#x4F1A;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x8BFE;&#x4E2D;&#xFF0C;&#x60A8;&#x5B66;&#x4E60;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5F3A;&#x5927;&#x7684; <code>lapply()</code> &#x548C; <code>sapply()</code> &#x51FD;&#x6570;&#x5BF9;&#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x4E0B;&#x4E00;&#x8282;&#x8BFE;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E86;&#x89E3;&#x5B83;&#x4EEC;&#x7684;&#x4E00;&#x4E9B;&#x8FD1;&#x4EB2;&#x51FD;&#x6570;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; xresearcher.com 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 
+2020-03-31 15:56:20
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lesson9.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lesson11.html" class="navigation navigation-next " aria-label="Next page: vapply 和 tapply 函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"lapply 和 sapply 函数","level":"1.2.10","depth":2,"next":{"title":"vapply 和 tapply 函数","level":"1.2.11","depth":2,"path":"R/RProgramming/lesson11.md","ref":"R/RProgramming/lesson11.md","articles":[]},"previous":{"title":"函数","level":"1.2.9","depth":2,"path":"R/RProgramming/lesson9.md","ref":"R/RProgramming/lesson9.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","anchors","anchor-navigation-ex","splitter","advanced-emoji","edit-link","katex","sitemap-general","todo","copy-code-button","alerts","include-csv","klipse","disqus","tbfed-pagefooter","versions-select"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xresearcher.com 2020","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"},"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"data-xresearcher-com"},"todo":{},"splitter":{},"versions-select":{"type":"branches"},"sitemap-general":{"prefix":"https://data.xresearcher.com"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"alerts":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"versions":{"options":[{"value":"https://data.xresearcher.com","text":"数据科学学习手册"},{"value":"https://data1.xresearcher.com","text":"示例：下拉菜单01"},{"value":"https://data0.xresearcher.com","text":"示例：下拉菜单02"}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/x-researcher/data/tree/master/gitbook-source"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Jonathon","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据科学学习手册","language":"zh-hans","links":{"sidebar":{"Home":"https://xresearcher.com"}},"gitbook":"*","description":"学习资料的整理","direction":"ltr"},"file":{"path":"R/RProgramming/lesson10.md","mtime":"2020-03-31T07:56:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-31T07:59:30.041Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
