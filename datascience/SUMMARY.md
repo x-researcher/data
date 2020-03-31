@@ -17,4 +17,4 @@
 	* [随机模拟](R/RProgramming/lesson13.md) 
 	* [日期和时间](R/RProgramming/lesson14.md) 
 	* [基本图形](R/RProgramming/lesson15.md) 
-* [回归模型](R/Regression%20Models/README.MD) 
+* [回归模型](R/RegressionModels/README.MD) 
